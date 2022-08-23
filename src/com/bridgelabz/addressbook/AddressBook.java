@@ -66,6 +66,7 @@ public class AddressBook {
 				System.out.println("What you want to edit for the contact");
 				System.out.println("1.First Name\n2.Last Name\n3.Address\n4.City\n5.State\n6.Zip Code\n7.Mobile Number\n8.Email id");
 				int choice = sc.nextInt();
+				// choose options what you want to edit
 				switch(choice) {
 				case 1:
 					System.out.println("Enter the First Name :");
