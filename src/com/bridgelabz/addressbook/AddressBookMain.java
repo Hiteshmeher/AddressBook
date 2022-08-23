@@ -1,5 +1,6 @@
 package com.bridgelabz.addressbook;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -12,6 +13,8 @@ public class AddressBookMain {
 	 * 
 	 * @param args
 	 */
+	HashMap<String,AddressBook> addressBookHashMap = new HashMap<>();
+	
 	public static void main(String[] args) {
 		/**
 		 * creating object of AddressBook class calling addContact method and displayContact
