@@ -1,6 +1,5 @@
 package com.bridgelabz.addressbook;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -13,7 +12,7 @@ public class AddressBookMain {
 	 * 
 	 * @param args
 	 */
-	HashMap<String,AddressBook> addressBookHashMap = new HashMap<>();
+//	HashMap<String,AddressBook> addressBookHashMap = new HashMap<>();
 	
 	public static void main(String[] args) {
 		/**
