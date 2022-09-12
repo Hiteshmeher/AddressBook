@@ -12,16 +12,16 @@ import java.util.stream.Collectors;
  * @author HITESH
  *
  */
-public class AddressBookMain {
+public class AddressBook {
 	static Scanner scanner = new Scanner(System.in);
-	ArrayList<Contacts> ContactsArrayList = new ArrayList<>();
-	static HashMap<String, ArrayList<Contacts>> hashmap = new HashMap<>();
-	static AddressBookMain details = new AddressBookMain();
+	ArrayList<Contact> ContactsArrayList = new ArrayList<>();
+	static HashMap<String, ArrayList<Contact>> hashmap = new HashMap<>();
+	static AddressBook details = new AddressBook();
 	static boolean flag = true;
 	// 
 	public void Address() {
 		// adding a contact
-		Contacts contact = new Contacts();
+		Contact contact = new Contact();
 		System.out.println("******* New Contact *******");
 		System.out.print("First Name    : ");
 		contact.setFirstName(scanner.next());
@@ -49,7 +49,7 @@ public class AddressBookMain {
 		System.out.println("Enter the first name of the contact you want to edit: ");
 		String name = scanner.next();
 
-		for (Contacts contacts : ContactsArrayList) {
+		for (Contact contacts : ContactsArrayList) {
 			if (contacts.getFirstName().equals(name)) {
 				System.out.print("Enter first name   : ");
 				contacts.setFirstName(scanner.next());
@@ -90,7 +90,7 @@ public class AddressBookMain {
 	}
 
 	public void duplicasy(String firstName) {
-		for (Contacts contacts : ContactsArrayList) {
+		for (Contact contacts : ContactsArrayList) {
 			String contactName = contacts.getFirstName();
 			if (firstName.equals(contactName)) {
 				System.out.println("This Person is Already Present");
