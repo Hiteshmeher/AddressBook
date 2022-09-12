@@ -6,48 +6,42 @@ package com.bridgelabz.addressbook;
  *
  */
 public class Contact {
-	// local variables
-	String first_name, last_name, address, city, state, zip, phone, email;
+	private String firstName, lastName, address, city, state, email, zip, phoneNumber;
 
-	// getters and setters
+	public Contact (String firstName, String lastName, String address, String city, String state, String zip,
+                 String phoneNumber, String email) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.address = address;
+    this.city = city;
+    this.state = state;
+    this.zip = zip;
+    this.phoneNumber = phoneNumber;
+    this.email = email;
+}
+
 	public String getFirstName() {
-		return first_name;
+		return firstName;
 	}
 
-	public void setFirstName(String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public String getLastName() {
-		return last_name;
+		return lastName;
 	}
 
 	public void setLastName(String lastName) {
-		this.last_name = lastName;
+		this.lastName = lastName;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPhoneNumber() {
-		return phone;
-	}
-
-	public void setPhoneNumber(String phone) {
-		this.phone = phone;
-	}
-
-	public String getZip() {
-		return zip;
-	}
-
-	public void setZip(String zip) {
-		this.zip = zip;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getCity() {
@@ -66,19 +60,32 @@ public class Contact {
 		this.state = state;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	// to string method
-	@Override
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
 	public String toString() {
-		return ("First name: " + first_name + "\n Last name: " + last_name + "\n Address: " + address + "\n city: "
-				+ city + "\n state: " + state + "\n zip: " + zip + "\n phone number:" + phone + "\n email: " + email
-				+ "");
+		return ("First name: " + firstName + " Last name: " + lastName + " Address: " + address + " city: " + city
+				+ " state: " + state + " email: " + email + " zip: " + zip + " phone number:" + phoneNumber + "");
 	}
 }
