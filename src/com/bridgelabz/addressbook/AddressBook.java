@@ -200,6 +200,7 @@ public class AddressBook {
 			System.out.println("INVALID CHOICE!");
 		}
 	}
+  
 	// display method view by options
 	public static void viewByOption() {
         Scanner sc = new Scanner(System.in);
@@ -227,3 +228,4 @@ public class AddressBook {
         }
     }
 }
+
