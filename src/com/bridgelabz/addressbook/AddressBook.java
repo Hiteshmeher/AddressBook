@@ -14,12 +14,12 @@ import java.util.stream.Collectors;
  * @author HITESH
  *
  */
-public class Operations {
+public class AddressBook {
 	static ArrayList<Contact> contactDetails = new ArrayList();
 	static Scanner sc = new Scanner(System.in);
 	static HashMap<String, ArrayList<Contact>> hashmap = new HashMap<>();
 
-	public static void AddressBook(Operations operations) {
+	public static void addressBook(AddressBook operations) {
 		int select;
 		do {
 			System.out.println("""
@@ -172,7 +172,7 @@ public class Operations {
 			for (Contact contacts : contactsDetails) {
 				if (contacts.getFirstName().equals(firstName)) {
 					System.out.println("The Name is already present.");
-					Operations.addDetails(contactsDetails);
+					AddressBook.addDetails(contactsDetails);
 				}
 			}
 			System.out.println("Re-enter first name");
@@ -205,7 +205,7 @@ public class Operations {
 	public void editDetails() {
 		System.out.println("Enter the first name you want to edit ");
 		String searchFirstName = sc.next();
-		for (Contact contact : Operations.contactDetails) {
+		for (Contact contact : AddressBook.contactDetails) {
 			String name = contact.getFirstName();
 			System.out.println(name);
 			if (name.equals(searchFirstName)) {
@@ -273,7 +273,7 @@ public class Operations {
 	public void deleteContact() {
 		System.out.println("Enter First Name for which you want to delete contact: ");
 		String firstname = sc.next();
-		Iterator<Contact> removeContact = Operations.contactDetails.iterator();
+		Iterator<Contact> removeContact = AddressBook.contactDetails.iterator();
 
 		while (removeContact.hasNext()) {
 			Contact nextElement = removeContact.next();
@@ -287,7 +287,7 @@ public class Operations {
 		}
 	}
 
-	public static void menuChoose(Operations operations, ArrayList<Contact> contactDetails) {
+	public static void menuChoose(AddressBook operations, ArrayList<Contact> contactDetails) {
 		Scanner sc = new Scanner(System.in);
 		int chooseNumber;
 		do {
