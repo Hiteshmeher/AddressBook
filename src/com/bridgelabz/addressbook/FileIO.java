@@ -1,4 +1,4 @@
-package com.bridgelabz.ab.addressbooks;
+package com.bridgelabz.addressbook;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
