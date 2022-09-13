@@ -318,3 +318,32 @@ public class AddressBook {
 		} while (chooseNumber != 5);
 	}
 }
+
+  
+	// display method view by options
+	public static void viewByOption() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1. View By name");
+        System.out.println("2. View By city");
+        System.out.println("3. View By state");
+        System.out.println("4. Back");
+        System.out.print("Enter Your choice: ");
+        int choice = sc.nextInt();
+        sc.nextLine();
+        switch (choice) {
+            case 1:
+                viewByName(nameHashMap);
+                break;
+            case 2:
+                viewByCity(cityHashMap);
+                break;
+            case 3:
+                viewByState(stateHashMap);
+                break;
+            case 4:
+                return;
+            default:
+                System.out.println("INVALID CHOICE!");
+        }
+    }
+}
