@@ -6,7 +6,19 @@ package com.bridgelabz.addressbook;
  *
  */
 public class Contact {
-	private String firstName, lastName, address, city, state, zip, contactNo, email;
+	private String firstName, lastName, address, city, state, email, zip, phoneNumber;
+
+	public Contact (String firstName, String lastName, String address, String city, String state, String zip,
+                     String phoneNumber, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
 
 	public String getFirstName() {
 		return firstName;
@@ -48,22 +60,6 @@ public class Contact {
 		this.state = state;
 	}
 
-	public String getZip() {
-		return zip;
-	}
-
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
-
-	public String getContactNo() {
-		return contactNo;
-	}
-
-	public void setContactNo(String contactNo) {
-		this.contactNo = contactNo;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -72,9 +68,25 @@ public class Contact {
 		this.email = email;
 	}
 
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	@Override
 	public String toString() {
-		return ("\nFirstName:- " + firstName + "\nLastName:- " + lastName + "\nAddress:- " + address + "\nCity:- "
-				+ city + "\nState:- " + state + "\nZip code:- " + zip + "\nContact Number:- " + contactNo
-				+ "\nEmail Id:-" + email);
+		return ("First name: " + firstName + " Last name: " + lastName + " Address: " + address + " city: " + city
+				+ " state: " + state + " email: " + email + " zip: " + zip + " phone number:" + phoneNumber + "");
 	}
 }
