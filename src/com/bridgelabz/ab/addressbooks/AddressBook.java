@@ -1,4 +1,4 @@
-package com.bridgelabz.addressbook;
+package com.bridgelabz.ab.addressbooks;
 
 import java.util.ArrayList;
 import java.util.Comparator;
